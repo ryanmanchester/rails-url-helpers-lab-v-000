@@ -10,6 +10,9 @@ class StudentsController < ApplicationController
   end
 
   def edit
+  
+    !@student.active ? "active" : "inactive"
+    redirect_to "/students/#{@student.id}"
   end
 
   private
